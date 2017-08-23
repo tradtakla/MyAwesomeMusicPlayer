@@ -26,12 +26,14 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:textSize="25dp"
+			android:textColor="@color/colorWhite"
 			/>
 
 		<TextView
 			android:id="@+id/tvArtist"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:textColor="@color/colorWhite"
 			android:layout_weight=".5"
 			android:textSize="15dp"/>
 

@@ -17,7 +17,16 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.w3c.dom.Text;
+
+import java.net.URLEncoder;
 
 public class MusicPlayer extends AppCompatActivity
 {
@@ -26,6 +35,7 @@ public class MusicPlayer extends AppCompatActivity
     private ImageView play, next, back;
     private TextView currentTime, songDuration;
     private MediaPlayer music;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -57,11 +67,8 @@ public class MusicPlayer extends AppCompatActivity
         tvArtist.setText(artistName);
         ivCover.setImageResource(cover);
 
-
         music = MediaPlayer.create(MusicPlayer.this, song);
-
         songDuration.setText(getTimeString(music.getDuration()));
-
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
         {
@@ -86,7 +93,37 @@ public class MusicPlayer extends AppCompatActivity
 
             }
         });
+        getTrackId(songName, artistName);
 
+    }
+
+    private void getTrackId(String track, String artist)
+    {
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = getString(R.string.musixmatch_baseurl) + "track.search?apikey=" + getString(R.string.musixmatch_apikey) + "&q_track=" + track + "&q_artist=" + artist;
+        url = url.replaceAll(" ", "%20");
+
+        System.out.println(url);
+
+
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
+//        {
+//            @Override
+//            public void onResponse(String response)
+//            {
+//
+//            }
+//        }, new Response.ErrorListener()
+//        {
+//            @Override
+//            public void onErrorResponse(VolleyError error)
+//            {
+//
+//            }
+//        });
+//
+//        queue.add(stringRequest);
     }
 
     public static String getTimeString(long duration)
@@ -148,19 +185,7 @@ public class MusicPlayer extends AppCompatActivity
                     music.seekTo(maxTime);
                     currentTime.setText(getTimeString(music.getCurrentPosition()));
                     play.setImageResource(R.drawable.play_button);
-
-
-//
-//                    music.stop();
-//                    int time = music.getDuration();
-//                    seekBar.setMax(time);
-//                    seekBar.setProgress(time);
-//                    currentTime.setText(getTimeString(time));
-//
-
                     break;
-
-
             }
         }
     };

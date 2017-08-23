@@ -1,3 +1,6 @@
 <resources>
 	<string name="app_name">My Awesome Music Player</string>
+	<string name="musixmatch_baseurl">http://api.musixmatch.com/ws/1.1/</string>
+	<string name="musixmatch_apikey">21026c43122429c6c899014da40ad72f</string>
+
 </resources>
