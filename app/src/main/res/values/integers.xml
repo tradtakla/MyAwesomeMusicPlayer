@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="musixmatch_request_successful">200</integer>
+	<integer name="musixmatch_request_bad_syntax">400</integer>
+	<integer name="musixmatch_request_authentication_failed">401</integer>
+	<integer name="musixmatch_request_usage_limit">402</integer>
+	<integer name="musixmatch_request_not_authorized">403</integer>
+	<integer name="musixmatch_request_resource_not_found">404</integer>
+	<integer name="musixmatch_request_method_not_found">405</integer>
+	<integer name="musixmatch_request_something_wrong">500</integer>
+	<integer name="musixmatch_request_system_busy">503</integer>
+
+</resources>

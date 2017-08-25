@@ -1,6 +1,15 @@
 <resources>
 	<string name="app_name">My Awesome Music Player</string>
+
 	<string name="musixmatch_baseurl">http://api.musixmatch.com/ws/1.1/</string>
 	<string name="musixmatch_apikey">21026c43122429c6c899014da40ad72f</string>
+	<string name="musixmatch_request_bad_syntax">The request had bad syntax or was inherently impossible to be satisfied.</string>
+	<string name="musixmatch_request_authentication_failed">Authentication failed, probably because of invalid/missing API key.</string>
+	<string name="musixmatch_request_usage_limit">The usage limit has been reached, either you exceeded per day requests limits or your balance is insufficient.</string>
+	<string name="musixmatch_request_not_authorized">You are not authorized to perform this operation.</string>
+	<string name="musixmatch_request_resource_not_found">The requested resource was not found.</string>
+	<string name="musixmatch_request_method_not_found">The requested method was not found.</string>
+	<string name="musixmatch_request_something_wrong">Ops. Something were wrong.</string>
+	<string name="musixmatch_request_system_busy">Our system is a bit busy at the moment and your request can’t be satisfied.</string>
 
 </resources>
