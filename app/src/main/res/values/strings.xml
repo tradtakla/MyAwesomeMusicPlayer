@@ -12,4 +12,13 @@
 	<string name="musixmatch_request_something_wrong">Ops. Something were wrong.</string>
 	<string name="musixmatch_request_system_busy">Our system is a bit busy at the moment and your request can’t be satisfied.</string>
 
+
+	<string name="cover_feels">https://upload.wikimedia.org/wikipedia/en/6/6b/Calvin_Harris_-_Feels_cover_art.png</string>
+	<string name="cover_symphony">http://allaroundnewmusic.com/wp-content/uploads/2017/03/symphony.jpg</string>
+	<string name="cover_mama">https://i.pinimg.com/originals/a9/8f/cd/a98fcd337f45e7d631087b800cb5b2e4.jpg</string>
+	<string name="cover_knownobetter">https://images.genius.com/e482f9e755613a146db752795dd9f284.1000x1000x1.jpg</string>
+	<string name="cover_thereforyou">https://images.genius.com/711736f2f8fafbe2a1430c929cf5718b.1000x1000x1.jpg</string>
+	<string name="cover_somethingjustlikethis">https://i.ytimg.com/vi/FM7MFYoylVs/maxresdefault.jpg</string>
+
+
 </resources>

@@ -4,6 +4,7 @@ package com.appsandgamesinc.myawesomemusicplayer;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.appsandgamesinc.myawesomemusicplayer.model.Music;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -55,7 +57,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     {
         holder.tvName.setText(musicAL.get(position).getName());
         holder.tvArtist.setText(musicAL.get(position).getArtist());
-        holder.ivImage.setImageResource(musicAL.get(position).getImageId());
+
+
+        String url = context.getString(musicAL.get(position).getImageId());
+        Picasso.with(context).load(url).into(holder.ivImage);
 
         holder.itemView.setOnClickListener(new View.OnClickListener()
         {

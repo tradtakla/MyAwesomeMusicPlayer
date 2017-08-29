@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -27,6 +28,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -72,7 +74,7 @@ public class MusicPlayer extends AppCompatActivity
 
         tvName.setText(songName);
         tvArtist.setText(artistName);
-        ivCover.setImageResource(cover);
+        Picasso.with(MusicPlayer.this).load(cover).into(ivCover);
 
         music = MediaPlayer.create(MusicPlayer.this, song);
         songDuration.setText(getTimeString(music.getDuration()));
@@ -110,7 +112,6 @@ public class MusicPlayer extends AppCompatActivity
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = getString(R.string.musixmatch_baseurl) + "track.search?apikey=" + getString(R.string.musixmatch_apikey) + "&q_track=" + track + "&q_artist=" + artist + "&page_size=20";
         url = url.replaceAll(" ", "%20");
-        System.out.println(url);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>()
         {

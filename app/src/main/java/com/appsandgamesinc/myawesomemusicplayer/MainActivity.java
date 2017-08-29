@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity
     private void initVars()
     {
         ArrayList<Music> musicAL = new ArrayList<>();
-        musicAL.add(new Music("Feels","Calvin Harris", R.drawable.a, R.raw.a));
-        musicAL.add(new Music("Symphony","Clean Bandit", R.drawable.b,R.raw.b));
-        musicAL.add(new Music("Mama","Jonas Blue", R.drawable.c,R.raw.c));
-        musicAL.add(new Music("Know No Better","Major Lazer", R.drawable.d,R.raw.d) );
-        musicAL.add(new Music("There For You","Martin Garrix & Troye Sivan", R.drawable.e, R.raw.e));
-        musicAL.add(new Music("Something Just Like This","The Chainsmokers & Coldplay", R.drawable.f, R.raw.f));
+        musicAL.add(new Music("Feels", "Calvin Harris", R.string.cover_feels, R.raw.a));
+        musicAL.add(new Music("Symphony", "Clean Bandit", R.string.cover_symphony, R.raw.b));
+        musicAL.add(new Music("Mama", "Jonas Blue", R.string.cover_mama, R.raw.c));
+        musicAL.add(new Music("Know No Better", "Major Lazer", R.string.cover_knownobetter, R.raw.d));
+        musicAL.add(new Music("There For You", "Martin Garrix & Troye Sivan", R.string.cover_thereforyou, R.raw.e));
+        musicAL.add(new Music("Something Just Like This", "The Chainsmokers & Coldplay", R.string.cover_somethingjustlikethis, R.raw.f));
 
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvMusic);
