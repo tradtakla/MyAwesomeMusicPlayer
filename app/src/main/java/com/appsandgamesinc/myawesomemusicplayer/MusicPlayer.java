@@ -74,7 +74,8 @@ public class MusicPlayer extends AppCompatActivity
 
         tvName.setText(songName);
         tvArtist.setText(artistName);
-        Picasso.with(MusicPlayer.this).load(cover).into(ivCover);
+        Picasso.with(MusicPlayer.this).load(getString(cover)).into(ivCover);
+
 
         music = MediaPlayer.create(MusicPlayer.this, song);
         songDuration.setText(getTimeString(music.getDuration()));
